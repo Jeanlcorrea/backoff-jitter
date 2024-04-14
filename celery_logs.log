@@ -1,0 +1,230 @@
+2024-04-14 17:49:46,296 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:49:46,296 - INFO - Backing off minha_task_generica(...) for 0.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:49:46,390 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:49:46,390 - INFO - Backing off minha_task_generica(...) for 0.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:49:47,171 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:49:47,172 - INFO - Backing off minha_task_generica(...) for 1.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:49:49,023 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:49:49,023 - INFO - Backing off minha_task_generica(...) for 1.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:49:50,229 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:49:50,230 - INFO - Backing off minha_task_generica(...) for 11.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:50:01,671 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:50:01,672 - INFO - Backing off minha_task_generica(...) for 8.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:50:10,020 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:50:10,020 - INFO - Backing off minha_task_generica(...) for 58.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:51:08,647 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:51:08,648 - INFO - Backing off minha_task_generica(...) for 100.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:52:48,860 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:52:48,860 - INFO - Backing off minha_task_generica(...) for 129.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:54:58,840 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:54:58,840 - ERROR - Giving up minha_task_generica(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:26,608 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:26,609 - INFO - Backing off generic_task(...) for 0.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:27,415 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:27,416 - INFO - Backing off generic_task(...) for 0.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:28,238 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:28,238 - INFO - Backing off generic_task(...) for 0.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:28,518 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:28,518 - INFO - Backing off generic_task(...) for 5.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:34,351 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:34,351 - INFO - Backing off generic_task(...) for 11.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:45,939 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:45,940 - INFO - Backing off generic_task(...) for 9.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:56:55,165 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:56:55,165 - INFO - Backing off generic_task(...) for 58.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:57:54,125 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:57:54,126 - INFO - Backing off generic_task(...) for 118.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 17:59:53,095 - INFO - Erro: Ocorreu um erro
+2024-04-14 17:59:53,096 - INFO - Backing off generic_task(...) for 51.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:00:44,960 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:00:44,961 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:27,401 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:27,401 - INFO - Backing off generic_task(...) for 0.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:28,181 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:28,181 - INFO - Backing off generic_task(...) for 1.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:29,133 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:29,133 - INFO - Backing off generic_task(...) for 2.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:31,267 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:31,268 - INFO - Backing off generic_task(...) for 3.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:34,883 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:34,884 - INFO - Backing off generic_task(...) for 8.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:05:43,595 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:05:43,596 - INFO - Backing off generic_task(...) for 29.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:06:13,343 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:06:13,344 - INFO - Backing off generic_task(...) for 33.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:06:46,891 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:06:46,892 - INFO - Backing off generic_task(...) for 59.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:07:46,412 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:07:46,412 - INFO - Backing off generic_task(...) for 121.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:09:47,863 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:09:47,864 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:11:44,472 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:11:44,472 - INFO - Backing off generic_task(...) for 0.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:11:45,371 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:11:45,372 - INFO - Backing off generic_task(...) for 0.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:11:45,864 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:11:45,864 - INFO - Backing off generic_task(...) for 2.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:11:48,327 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:11:48,328 - INFO - Backing off generic_task(...) for 6.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:11:55,081 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:11:55,081 - INFO - Backing off generic_task(...) for 11.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:12:06,299 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:12:06,300 - INFO - Backing off generic_task(...) for 6.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:12:12,584 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:12:12,584 - INFO - Backing off generic_task(...) for 53.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:13:06,115 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:13:06,116 - INFO - Backing off generic_task(...) for 21.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:13:27,511 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:13:27,512 - INFO - Backing off generic_task(...) for 133.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:15:41,223 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:15:41,224 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:24,841 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:24,841 - INFO - Backing off generic_task(...) for 0.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:25,728 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:25,728 - INFO - Backing off generic_task(...) for 0.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:26,454 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:26,454 - INFO - Backing off generic_task(...) for 3.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:30,020 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:30,020 - INFO - Backing off generic_task(...) for 2.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:32,634 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:32,635 - INFO - Backing off generic_task(...) for 7.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:41:39,971 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:41:39,972 - INFO - Backing off generic_task(...) for 29.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:42:09,948 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:42:09,948 - INFO - Backing off generic_task(...) for 20.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:42:30,155 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:42:30,156 - INFO - Backing off generic_task(...) for 23.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:42:53,480 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:42:53,480 - INFO - Backing off generic_task(...) for 255.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:47:09,288 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:47:09,288 - INFO - Backing off generic_task(...) for 436.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:54:25,339 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:54:25,340 - INFO - Backing off generic_task(...) for 252.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 18:58:37,999 - INFO - Erro: Ocorreu um erro
+2024-04-14 18:58:38,000 - INFO - Backing off generic_task(...) for 103.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:00:21,399 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:00:21,400 - INFO - Backing off generic_task(...) for 3908.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:01:51,665 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:01:51,665 - INFO - Backing off generic_task(...) for 0.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:01:51,795 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:01:51,796 - INFO - Backing off generic_task(...) for 0.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:01:51,933 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:01:51,934 - INFO - Backing off generic_task(...) for 3.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:01:55,824 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:01:55,825 - INFO - Backing off generic_task(...) for 2.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:01:57,948 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:01:57,949 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:04:11,669 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:04:11,669 - INFO - Backing off generic_task(...) for 0.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:04:11,930 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:04:11,930 - INFO - Backing off generic_task(...) for 1.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:04:13,415 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:04:13,416 - INFO - Backing off generic_task(...) for 3.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:04:16,484 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:04:16,484 - INFO - Backing off generic_task(...) for 0.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:04:17,181 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:04:17,181 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:05:15,496 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:05:15,497 - INFO - Backing off generic_task(...) for 0.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:05:15,544 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:05:15,544 - INFO - Backing off generic_task(...) for 1.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:05:17,214 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:05:17,216 - INFO - Backing off generic_task(...) for 0.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:05:17,894 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:05:17,895 - INFO - Backing off generic_task(...) for 3.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:05:20,907 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:05:20,908 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:22:46,152 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:22:46,152 - INFO - Backing off generic_task(...) for 0.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:22:46,715 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:22:46,716 - INFO - Backing off generic_task(...) for 0.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:22:47,133 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:22:47,133 - INFO - Backing off generic_task(...) for 1.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:22:48,441 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:22:48,441 - INFO - Backing off generic_task(...) for 3.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:22:51,716 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:22:51,716 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:00,173 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:00,173 - INFO - Backing off generic_task(...) for 0.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:00,216 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:00,216 - INFO - Backing off generic_task(...) for 1.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:01,710 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:01,711 - INFO - Backing off generic_task(...) for 0.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:01,771 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:01,771 - INFO - Backing off generic_task(...) for 5.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:07,545 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:07,546 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:47,777 - INFO - --------------------------------------------------------------------------------
+2024-04-14 19:23:47,784 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:47,784 - INFO - Backing off generic_task(...) for 0.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:48,713 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:48,713 - INFO - Backing off generic_task(...) for 0.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:49,224 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:49,225 - INFO - Backing off generic_task(...) for 2.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:51,827 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:51,828 - INFO - Backing off generic_task(...) for 1.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:23:53,167 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:23:53,167 - ERROR - Giving up generic_task(...) after 5 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:14,477 - INFO - --------------------------------------------------------------------------------
+2024-04-14 19:24:14,483 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:14,484 - INFO - Backing off generic_task(...) for 0.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:14,999 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:15,000 - INFO - Backing off generic_task(...) for 1.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:16,309 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:16,309 - INFO - Backing off generic_task(...) for 2.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:18,630 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:18,630 - INFO - Backing off generic_task(...) for 3.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:22,327 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:22,328 - INFO - Backing off generic_task(...) for 7.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:29,632 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:29,632 - INFO - Backing off generic_task(...) for 28.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:24:58,243 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:24:58,243 - INFO - Backing off generic_task(...) for 4.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:25:02,993 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:25:02,993 - INFO - Backing off generic_task(...) for 123.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:27:06,979 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:27:06,980 - INFO - Backing off generic_task(...) for 107.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:28:54,513 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:28:54,514 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:04,750 - INFO - --------------------------------------------------------------------------------
+2024-04-14 19:30:04,757 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:04,757 - INFO - Backing off generic_task(...) for 0.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:05,625 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:05,625 - INFO - Backing off generic_task(...) for 1.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:06,771 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:06,772 - INFO - Backing off generic_task(...) for 0.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:07,491 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:07,491 - INFO - Backing off generic_task(...) for 4.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:12,317 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:12,318 - INFO - Backing off generic_task(...) for 6.8s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:19,135 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:19,136 - INFO - Backing off generic_task(...) for 0.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:19,585 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:19,585 - INFO - Backing off generic_task(...) for 1.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:30:20,767 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:30:20,768 - INFO - Backing off generic_task(...) for 102.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:32:03,196 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:32:03,197 - INFO - Backing off generic_task(...) for 178.0s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:01,283 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:01,284 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:25,506 - INFO - --------------------------------------------------------------------------------
+2024-04-14 19:35:25,513 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:25,513 - INFO - Backing off generic_task(...) for 1.7s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:27,235 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:27,236 - INFO - Backing off generic_task(...) for 2.6s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:29,860 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:29,861 - INFO - Backing off generic_task(...) for 4.9s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:34,747 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:34,747 - INFO - Backing off generic_task(...) for 8.1s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:42,852 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:42,852 - INFO - Backing off generic_task(...) for 16.3s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:35:59,196 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:35:59,196 - INFO - Backing off generic_task(...) for 32.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:36:31,628 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:36:31,628 - INFO - Backing off generic_task(...) for 64.4s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:37:36,125 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:37:36,126 - INFO - Backing off generic_task(...) for 128.2s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:39:44,435 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:39:44,436 - INFO - Backing off generic_task(...) for 256.5s (celery.exceptions.Retry: Task can be retried)
+2024-04-14 19:44:01,071 - INFO - Erro: Ocorreu um erro
+2024-04-14 19:44:01,072 - ERROR - Giving up generic_task(...) after 10 tries (celery.exceptions.Retry: Task can be retried)

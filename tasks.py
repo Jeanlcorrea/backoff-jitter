@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 # Verifica se o arquivo de log já existe
 if os.path.exists('celery_logs.log'):
-    logger.info('-' * 100)
+    logger.info('-' * 110)
 
 
 @shared_task(bind=True, acks_late=False, countdown=12)

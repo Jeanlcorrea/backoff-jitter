@@ -1,0 +1,703 @@
+[1;33m[2024-04-21 17:38:06,891: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:38:06,965: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:39:57,485: ERROR/ForkPoolWorker-6] Task polls.tasks.task_transaction_test[3b3d6594-efb7-44a7-be4e-8ab9d6dd8088] raised unexpected: OperationalError('no such table: auth_user')
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 88, in task_transaction_test
+    user = User.objects.create_user(username, 'lennon@thebeatles.com', 'johnpassword')
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: auth_user[0m
+[1;33m[2024-04-21 17:41:58,798: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:41:58,802: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:44:22,109: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:44:22,114: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:46:02,272: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:46:02,277: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:46:34,780: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[80acf1b3-6a41-4271-8e70-247f419b903e] raised unexpected: MaxRetriesExceededError("Can't retry polls.tasks.task_process_notification[80acf1b3-6a41-4271-8e70-247f419b903e] args:() kwargs:{}")
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 25, in task_process_notification
+    raise Exception("Ocorreu um erro")
+Exception: Ocorreu um erro
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 60, in run
+    ret = task.retry(exc=exc, **retry_kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 38, in run
+    return task._orig_run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 28, in task_process_notification
+    self.retry()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 737, in retry
+    raise self.MaxRetriesExceededError(
+celery.exceptions.MaxRetriesExceededError: Can't retry polls.tasks.task_process_notification[80acf1b3-6a41-4271-8e70-247f419b903e] args:() kwargs:{}[0m
+[1;31m[2024-04-21 17:46:44,264: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[809bb3b7-b0aa-4bb4-aac7-9442dda32d0f] raised unexpected: MaxRetriesExceededError("Can't retry polls.tasks.task_process_notification[809bb3b7-b0aa-4bb4-aac7-9442dda32d0f] args:() kwargs:{}")
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 25, in task_process_notification
+    raise Exception("Ocorreu um erro")
+Exception: Ocorreu um erro
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 60, in run
+    ret = task.retry(exc=exc, **retry_kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 38, in run
+    return task._orig_run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 28, in task_process_notification
+    self.retry()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 737, in retry
+    raise self.MaxRetriesExceededError(
+celery.exceptions.MaxRetriesExceededError: Can't retry polls.tasks.task_process_notification[809bb3b7-b0aa-4bb4-aac7-9442dda32d0f] args:() kwargs:{}[0m
+[1;33m[2024-04-21 17:48:36,155: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:48:36,160: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:48:50,312: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[0ae202de-1811-4c33-9727-8f27aabf815f] raised unexpected: MaxRetriesExceededError("Can't retry polls.tasks.task_process_notification[0ae202de-1811-4c33-9727-8f27aabf815f] args:() kwargs:{}")
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 33, in task_process_notification
+    raise Exception("Ocorreu um erro")
+Exception: Ocorreu um erro
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 60, in run
+    ret = task.retry(exc=exc, **retry_kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 38, in run
+    return task._orig_run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 36, in task_process_notification
+    self.retry()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 737, in retry
+    raise self.MaxRetriesExceededError(
+celery.exceptions.MaxRetriesExceededError: Can't retry polls.tasks.task_process_notification[0ae202de-1811-4c33-9727-8f27aabf815f] args:() kwargs:{}[0m
+[1;33m[2024-04-21 17:50:20,945: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:50:20,949: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:51:19,297: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[016c977c-9851-454a-aa68-d4601f86d7b8] raised unexpected: Exception()
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 60, in run
+    ret = task.retry(exc=exc, **retry_kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 38, in run
+    return task._orig_run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 31, in task_process_notification
+    raise Exception()
+Exception[0m
+[1;33m[2024-04-21 17:55:21,025: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:55:21,029: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:55:40,486: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[e31adcc5-d34c-4ef4-b575-7b9e11a1f72d] raised unexpected: Exception()
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 60, in run
+    ret = task.retry(exc=exc, **retry_kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/autoretry.py", line 38, in run
+    return task._orig_run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 31, in task_process_notification
+    raise Exception()
+Exception[0m
+[1;33m[2024-04-21 17:57:35,191: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:57:35,196: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 17:57:44,699: ERROR/ForkPoolWorker-6] Task polls.tasks.task_process_notification[873511f6-ab83-4a4a-93ae-927b05bb87ac] raised unexpected: Exception()
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 25, in task_process_notification
+    raise Exception()
+Exception[0m
+[1;33m[2024-04-21 17:59:15,188: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 17:59:15,194: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:04:17,953: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:04:17,958: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:07:08,588: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:07:08,593: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 18:09:15,760: ERROR/ForkPoolWorker-7] Task polls.tasks.task_transaction_test[ae00e0ad-551a-4f2e-8418-baa6b676b79d] raised unexpected: OperationalError('no such table: auth_user')
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: auth_user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 453, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/trace.py", line 736, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 33, in wrapper_func
+    raise task_func.retry(exc=e, countdown=countdown)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/app/task.py", line 736, in retry
+    raise_with_context(exc)
+  File "/home/jean-correa/django-celery-project/polls/base_task.py", line 26, in wrapper_func
+    return func(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/polls/tasks.py", line 93, in task_transaction_test
+    user = User.objects.create_user(username, 'lennon@thebeatles.com', 'johnpassword')
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: auth_user[0m
+[1;33m[2024-04-21 18:10:06,705: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:10:06,710: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:10:50,272: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:10:50,277: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 18:10:54,511: ERROR/MainProcess] Received unregistered task of type 'polls.tasks.task_transaction_test'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'polls.tasks.task_transaction_test', 'id': '2adfd952-3d3b-4451-b214-c07595d3bfed', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2adfd952-3d3b-4451-b214-c07595d3bfed', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2053983@NTD104', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'default'}
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'polls.tasks.task_transaction_test'[0m
+[1;33m[2024-04-21 18:11:53,614: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:11:53,618: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 18:11:58,199: ERROR/MainProcess] Received unregistered task of type 'polls.tasks.task_transaction_test'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'polls.tasks.task_transaction_test', 'id': '1036fdf0-4908-4ae8-8931-ca38d33eff3b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1036fdf0-4908-4ae8-8931-ca38d33eff3b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2053983@NTD104', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'default'}
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'polls.tasks.task_transaction_test'[0m
+[1;33m[2024-04-21 18:12:52,142: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;33m[2024-04-21 18:12:52,147: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[1;31m[2024-04-21 18:12:56,516: ERROR/MainProcess] Received unregistered task of type 'polls.tasks.task_transaction_test'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+https://docs.celeryq.dev/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (77b)
+
+The full contents of the message headers:
+{'lang': 'py', 'task': 'polls.tasks.task_transaction_test', 'id': '8beca973-aa3f-4525-8e85-ca615e8d0651', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'group_index': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '8beca973-aa3f-4525-8e85-ca615e8d0651', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen2053983@NTD104', 'ignore_result': False, 'replaced_task_nesting': 0, 'stamped_headers': None, 'stamps': {}}
+
+The delivery info for this task is:
+{'exchange': '', 'routing_key': 'default'}
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 659, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'polls.tasks.task_transaction_test'[0m
+[2024-04-21 18:19:33,091: INFO/MainProcess] beat: Starting...
+[1;35m[2024-04-21 18:19:33,103: CRITICAL/MainProcess] beat raised exception <class 'django.db.utils.OperationalError'>: OperationalError('no such table: django_celery_beat_periodictask')
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: django_celery_beat_periodictask
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/apps/beat.py", line 113, in start_scheduler
+    service.start()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 634, in start
+    humanize_seconds(self.scheduler.max_interval))
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__
+    return super().__get__(instance, owner)
+  File "/usr/lib/python3.8/functools.py", line 967, in __get__
+    val = self.func(instance)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 677, in scheduler
+    return self.get_scheduler()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 668, in get_scheduler
+    return symbol_by_name(self.scheduler_cls, aliases=aliases)(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 233, in __init__
+    Scheduler.__init__(self, *args, **kwargs)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 264, in __init__
+    self.setup_schedule()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 241, in setup_schedule
+    self.install_default_entries(self.schedule)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 363, in schedule
+    self._schedule = self.all_as_schedule()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 247, in all_as_schedule
+    for model in self.Model.objects.enabled():
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: django_celery_beat_periodictask[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] Traceback (most recent call last):[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] return self.cursor.execute(sql, params)[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] return super().execute(query, params)[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] sqlite3[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] .[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] OperationalError[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] : [0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] no such table: django_celery_beat_periodictask[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] 
+The above exception was the direct cause of the following exception:[0m
+[1;33m[2024-04-21 18:19:33,105: WARNING/MainProcess] Traceback (most recent call last):[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/bin/celery", line 8, in <module>[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess] sys.exit(main())[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/__main__.py", line 15, in main[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess] sys.exit(_main())[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/bin/celery.py", line 236, in main[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess] return celery(auto_envvar_prefix="CELERY")[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/core.py", line 1157, in __call__[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess] return self.main(*args, **kwargs)[0m
+[1;33m[2024-04-21 18:19:33,106: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/core.py", line 1078, in main[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess] rv = self.invoke(ctx)[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/core.py", line 1688, in invoke[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess] return _process_result(sub_ctx.command.invoke(sub_ctx))[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/core.py", line 1434, in invoke[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess] return ctx.invoke(self.callback, **ctx.params)[0m
+[1;33m[2024-04-21 18:19:33,107: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/core.py", line 783, in invoke[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess] return __callback(*args, **kwargs)[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/click/decorators.py", line 33, in new_func[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess] return f(get_current_context(), *args, **kwargs)[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/bin/base.py", line 135, in caller[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess] return f(ctx, *args, **kwargs)[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/bin/beat.py", line 72, in beat[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess] return beat().run()[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/apps/beat.py", line 84, in run[0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,108: WARNING/MainProcess] self.start_scheduler()[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/apps/beat.py", line 113, in start_scheduler[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess] service.start()[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 634, in start[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess] humanize_seconds(self.scheduler.max_interval))[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/kombu/utils/objects.py", line 40, in __get__[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess] return super().__get__(instance, owner)[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]   File "/usr/lib/python3.8/functools.py", line 967, in __get__[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess] val = self.func(instance)[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 677, in scheduler[0m
+[1;33m[2024-04-21 18:19:33,109: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess] return self.get_scheduler()[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 668, in get_scheduler[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess] return symbol_by_name(self.scheduler_cls, aliases=aliases)([0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 233, in __init__[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess] Scheduler.__init__(self, *args, **kwargs)[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/beat.py", line 264, in __init__[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess] self.setup_schedule()[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 241, in setup_schedule[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess] self.install_default_entries(self.schedule)[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 363, in schedule[0m
+[1;33m[2024-04-21 18:19:33,110: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess] self._schedule = self.all_as_schedule()[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django_celery_beat/schedulers.py", line 247, in all_as_schedule[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess] for model in self.Model.objects.enabled():[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 398, in __iter__[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess] self._fetch_all()[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 1881, in _fetch_all[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess] self._result_cache = list(self._iterable_class(self))[0m
+[1;33m[2024-04-21 18:19:33,111: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/query.py", line 91, in __iter__[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess] results = compiler.execute_sql([0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess] cursor.execute(sql, params)[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess] return super().execute(sql, params)[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess] return self._execute_with_wrappers([0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess] return executor(sql, params, many, context)[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute[0m
+[1;33m[2024-04-21 18:19:33,112: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] return self.cursor.execute(sql, params)[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] raise dj_exc_value.with_traceback(traceback) from exc_value[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] return self.cursor.execute(sql, params)[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]   File "/home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess]     [0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] return super().execute(query, params)[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] django.db.utils[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] .[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] OperationalError[0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] : [0m
+[1;33m[2024-04-21 18:19:33,113: WARNING/MainProcess] no such table: django_celery_beat_periodictask[0m
+[2024-04-21 18:19:43,454: INFO/MainProcess] beat: Starting...
+[1;33m[2024-04-21 18:21:30,422: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[2024-04-21 18:21:30,426: INFO/MainProcess] Connected to redis://127.0.0.1:6379/0
+[1;33m[2024-04-21 18:21:30,426: WARNING/MainProcess] /home/jean-correa/django-celery-project/.venv/lib/python3.8/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+[0m
+[2024-04-21 18:21:30,427: INFO/MainProcess] mingle: searching for neighbors
+[2024-04-21 18:21:31,434: INFO/MainProcess] mingle: all alone
+[2024-04-21 18:21:31,454: INFO/MainProcess] celery@NTD104 ready.
+[2024-04-21 18:21:31,459: INFO/MainProcess] Task polls.tasks.task_process_notification[5798782f-cdf8-41bd-beda-c6fb1f2b308d] received
+[2024-04-21 18:21:31,475: INFO/MainProcess] Task polls.tasks.task_process_notification[5798782f-cdf8-41bd-beda-c6fb1f2b308d] received
+[2024-04-21 18:21:31,477: INFO/ForkPoolWorker-6] Task polls.tasks.task_process_notification[5798782f-cdf8-41bd-beda-c6fb1f2b308d] retry: Retry in 5s: Exception()
+[2024-04-21 18:21:42,286: INFO/ForkPoolWorker-6] Task polls.tasks.task_process_notification[5798782f-cdf8-41bd-beda-c6fb1f2b308d] succeeded in 5.821043422969524s: None
